@@ -1,4 +1,8 @@
-from connect import get_rabbitmq_connection
+try:
+  from utils.connect import get_rabbitmq_connection
+except ModuleNotFoundError:
+  from ..utils.connect import get_rabbitmq_connection
+
 
 connection, channel = get_rabbitmq_connection()
 

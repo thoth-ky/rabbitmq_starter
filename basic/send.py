@@ -1,4 +1,4 @@
-from connect import get_rabbitmq_connection
+from utils.connect import get_rabbitmq_connection
 
 connection, channel = get_rabbitmq_connection()
 QUEUE_NAME='hello'
@@ -6,7 +6,7 @@ QUEUE_NAME='hello'
 # must create a queue first
 channel.queue_declare(queue=QUEUE_NAME)
 
-for i in range(50):
+for i in range(10):
   channel.basic_publish(
     exchange='', # use default exachebe
     routing_key=QUEUE_NAME, # queue name

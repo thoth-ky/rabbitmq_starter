@@ -2,15 +2,12 @@ To try this out,
 
 ## Steps
 
-1.  Clone this repo and cd to this folder
+1. Start the consumer, it will run continuously waiting for deliveries
   ```bash
-    $ cd basic
+    $ python -m basic.receive
   ```
-2. Start the consumer, it will run continuously waiting for deliveries
+
+2. Start the producer program
   ```bash
-    $ python receive.py
-  ```
-3. Start the producer program
-  ```bash
-    $ python send.py
+    $ python -m basic.send
   ```
