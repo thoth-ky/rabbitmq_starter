@@ -43,3 +43,12 @@ A new queue is declared in  `durable_task.py` and `durable_worker.py` that is ma
 To ensure the message is durable, we supply a `delivery_mode` property with value `2` to the publisher.
 
 Testing steps don't change
+
+# Fair Dispatch
+
+To avoid overwhelming thea worker, we can set `prefetch_count=1`. This will tell RabbitMQ not to give more than one message to the worker at a time.
+
+The, A new producer and consumer putting all these ideas together has been shown in the `final` folder.
+
+Run Worker: ```bash $ python -m worker_queues.final.worker```
+Run Producer: ```bash $ python -m worker_queues.final.task ```
