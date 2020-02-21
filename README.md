@@ -26,6 +26,9 @@ If you don't have the following programs already installed follow the links to i
   ```bash
   $ pip install -r requirements.txt
   ```
+## Disclaimer
+
+This is intended as a learning exercise. Code is not production ready by any standards.
 
 ## Author
 - Joseph Mutuku Kyalo
